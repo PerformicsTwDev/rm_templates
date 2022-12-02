@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link href="css/300250.css" rel="stylesheet">
+  <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+</head>
+
+<body>
+  <div id="main-container">
+    <div id="threeD-main">
+      <div id="threeD-cont" class="">
+        <div class="cube" id="cube-front">
+          <img src="img/img6.jpg" />
+        </div>
+        <div class="cube" id="cube-back">
+          <img src="img/img2.jpg" />
+        </div>
+        <div class="cube" id="cube-top">
+          <img src="img/img3.jpg" />
+        </div>
+        <div class="cube" id="cube-bottom">
+          <img src="img/img4.jpg" />
+        </div>
+        <div class="cube" id="cube-left">
+          <img src="img/img5.jpg" />
+        </div>
+        <div class="cube" id="cube-right">
+          <img src="img/img1.jpg" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="config_pfx.js"></script>
+  <script type="text/javascript" src="basicTracking.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/utils/Draggable.min.js"></script>
+
+  <script>
+
+    let nextslide = null
+    let prevSlide = null
+    let slides = document.querySelectorAll(".cube");
+    let slide = Array.prototype.map.call(slides, createSlide);
+    slides.forEach(function (slide, i) {
+      slide.next = slides[i + 1] || slides[0];
+    });
+
+    function createSlide(element, index) {
+      var slide = {
+        next: null,
+        index: index,
+        element: element,
+        isActive: false,
+        setActive: setActive,
+        setInactive: setInactive,
+        setPrevActive: setPrevActive,
+        setPrevInactive: setPrevInactive,
+      };
+    }
+
+    function autoplay() {
+      document.getElementById("threeD-cont").classList.add("cube-animate");
+      setTimeout(() => {
+        document.getElementById("cube-front").style.transition = "transform 0.8s ease-in-out";
+        document.getElementById("cube-front").style.transform = "translate3d(25px, 0, 0)";
+
+
+      }, 5200);
+    }
+
+    window.onload = () => {
+      autoplay()
+    }
+
+
+    Draggable.create(document.createElement("div"), {
+      trigger: "#threeD-main",
+      type: "x,y",
+      minimumMovement: 10,
+      onDragStart: updateDirections,
+
+    });
+
+    function updateDirections() {
+
+
+
+      if (this.getDirection() === "right") {
+        document.getElementById("threeD-cont").style.transition = "transform 0.8s ease-in-out";
+        document.getElementById("threeD-cont").style.transform = "rotateY(90deg)"
+        document.getElementById("cube-left").style.transform = "rotateY(270deg) translate3d(25px, 0, 0)"
+        document.getElementById("cube-front").style.transform = "rotateY(90deg) translate3d(25px, 0, 0)"
+      } else if (this.getDirection() === "left") {
+        document.getElementById("threeD-cont").style.transition = "transform 0.8s ease-in-out";
+        document.getElementById("threeD-cont").style.transform = "rotateY(90deg)"
+        document.getElementById("cube-front").style.transform = "rotateY(270deg) translate3d(25px, 0, 0)"
+        document.getElementById("cube-left").style.transform = "rotateY(90deg) translate3d(25px, 0, 0)"
+      } else if (this.getDirection() === "up") {
+        console.log("top")
+      } else {
+        console.log("down")
+      }
+
+
+
+
+
+    }
+  </script>
+
+
+</body>
