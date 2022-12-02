@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/320480.css" />
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+    <title>cc spotlights</title>
+</head>
+
+<body>
+
+    <div id="mainContainer">
+
+        <div id="effect">
+            <svg height="100%" width="100%" style="position:absolute;z-index:4">
+                <clipPath id="maskShape">
+                    <circle cx="50" cy="50" r="70" />
+                </clipPath>
+
+            </svg>
+        </div>
+
+        <img id="imgKV" class="" src="img/Spotlight_Area.png">
+        <img id="imgBg" class="img-product" src="img/bg.jpg">
+
+    </div>
+
+
+    <script src="config_pfx.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="js/basicTracking.js"></script>
+
+    <script>
+        var circle = document.getElementsByTagName('circle')[0];
+        var speed = 0.6;
+        function ended() {
+            gsap.to(circle, 0.3, {
+                r: '100%'
+            })
+        }
+        var t1 = gsap.timeline({
+            ease: 'Power2out', repeat: 1, yoyo: false, onComplete: ended
+        })
+
+        t1.to(circle, speed, {
+            cx: 100,
+            cy: 220
+        }).to(circle, speed, {
+            cx: 130,
+            cy: 80
+        }).to(circle, speed, {
+            cx: 180,
+            cy: 40
+        }).to(circle, speed, {
+            cx: 220,
+            cy: 180
+        }).to(circle, speed, {
+            cx: 270,
+            cy: 50
+        }).to(circle, speed, {
+            cx: 150,
+            cy: 150
+        }).to(circle, speed, {
+            cx: 50,
+            cy: 50
+        })
+    </script>
+
+</body>
+
+</html>

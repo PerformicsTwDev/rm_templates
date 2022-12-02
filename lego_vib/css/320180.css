@@ -1,0 +1,409 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#videoPoster {
+  width: 320px;
+  height: 180px;
+  position: absolute;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 0;
+  -webkit-transform: translate(-106.66px, 0px);
+  -ms-transform: translate(-106.66px, 0px);
+  transform: translate(-106.66px, 0px);
+  z-index: 99;
+}
+#videoPoster img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+#playBox {
+  width: 320px;
+  height: 180px;
+  position: absolute;
+}
+
+#play_btn_s {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  z-index: 999;
+}
+#play_btn_s img {
+  width: 100%;
+  height: auto;
+}
+
+#box {
+  position: absolute;
+  -webkit-transform: translate(-106.66px, 0px);
+  -ms-transform: translate(-106.66px, 0px);
+  transform: translate(-106.66px, 0px);
+  z-index: 50;
+}
+
+#banner {
+  width: calc(180px * 640 / 535);
+  height: 180px;
+  position: absolute;
+  -webkit-transform: translate(calc(320px - (180px * 640 / 535)), 0px);
+  -ms-transform: translate(calc(320px - (180px * 640 / 535)), 0px);
+  transform: translate(calc(320px - (180px * 640 / 535)), 0px);
+  /*			transition: transform 1s ease-in-out ,width 1s, height 1s;*/
+  z-index: 999;
+  line-height: 0;
+}
+#banner img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.down {
+  padding-bottom: 270.844px;
+}
+
+.up {
+  padding-bottom: 0px;
+}
+
+@-webkit-keyframes frameBig {
+  0% {
+    height: 180px;
+  }
+  100% {
+    height: 480px;
+  }
+}
+
+@keyframes frameBig {
+  0% {
+    height: 180px;
+  }
+  100% {
+    height: 480px;
+  }
+}
+
+@-webkit-keyframes bannerBig {
+  0% {
+    -webkit-transform: translate(calc(320px - (180px * 640 / 535)), 0px);
+    transform: translate(calc(320px - (180px * 640 / 535)), 0px);
+    width: calc(180px * 640 / 535);
+    height: 180px;
+  }
+  100% {
+    -webkit-transform: translate(0px, 180px);
+    transform: translate(0px, 180px);
+    width: 320px;
+    height: calc(320px * 535 / 640);
+  }
+}
+
+@keyframes bannerBig {
+  0% {
+    -webkit-transform: translate(calc(320px - (180px * 640 / 535)), 0px);
+    transform: translate(calc(320px - (180px * 640 / 535)), 0px);
+    width: calc(180px * 640 / 535);
+    height: 180px;
+  }
+  100% {
+    -webkit-transform: translate(0px, 180px);
+    transform: translate(0px, 180px);
+    width: 320px;
+    height: calc(320px * 535 / 640);
+  }
+}
+
+@-webkit-keyframes videoBig {
+  0% {
+    -webkit-transform: translate(-106.66px, 0px);
+    transform: translate(-106.66px, 0px);
+    height: 180px;
+    z-index: 50;
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    height: 447.5px;
+    z-index: 9999;
+  }
+}
+
+@keyframes videoBig {
+  0% {
+    -webkit-transform: translate(-106.66px, 0px);
+    transform: translate(-106.66px, 0px);
+    height: 180px;
+    z-index: 50;
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    height: 447.5px;
+    z-index: 9999;
+  }
+}
+
+@-webkit-keyframes frameSmall {
+  0% {
+    height: 447.5px;
+  }
+  100% {
+    height: 180px;
+  }
+}
+
+@keyframes frameSmall {
+  0% {
+    height: 447.5px;
+  }
+  100% {
+    height: 180px;
+  }
+}
+
+@-webkit-keyframes bannerSmall {
+  0% {
+    -webkit-transform: translate(0px, 180px);
+    transform: translate(0px, 180px);
+    width: 320px;
+    height: calc(320px * 535 / 640);
+  }
+  100% {
+    -webkit-transform: translate(calc(320px - (180px * 640 / 535)), 0px);
+    transform: translate(calc(320px - (180px * 640 / 535)), 0px);
+    width: calc(180px * 640 / 535);
+    height: 180px;
+  }
+}
+
+@keyframes bannerSmall {
+  0% {
+    -webkit-transform: translate(0px, 180px);
+    transform: translate(0px, 180px);
+    width: 320px;
+    height: calc(320px * 535 / 640);
+  }
+  100% {
+    -webkit-transform: translate(calc(320px - (180px * 640 / 535)), 0px);
+    transform: translate(calc(320px - (180px * 640 / 535)), 0px);
+    width: calc(180px * 640 / 535);
+    height: 180px;
+  }
+}
+
+@-webkit-keyframes videoSmall {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(-106.66px, 0px);
+    transform: translate(-106.66px, 0px);
+  }
+}
+
+@keyframes videoSmall {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(-106.66px, 0px);
+    transform: translate(-106.66px, 0px);
+  }
+}
+
+body,
+body * {
+  vertical-align: baseline;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 9pt;
+}
+
+#mainContainer {
+  position: relative;
+  width: 320px;
+  height: 180px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: transparent;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#bg {
+  width: 320px;
+  height: 180px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+#bg img {
+  width: 100%;
+  height: auto;
+}
+
+#featureBox {
+  position: absolute;
+  width: 320px;
+  height: 180px;
+  z-index: 99;
+}
+
+#exitBox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  z-index: 50;
+  background-color: transparent;
+}
+#exitBox img {
+  width: 100%;
+  height: auto;
+}

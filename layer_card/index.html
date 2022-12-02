@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./320480.css" />
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+    <title>PFX Float Banner</title>
+</head>
+
+<body>
+    <div id="mainContainer">
+        <div class="slide activeMob" id="slideContainer">
+            <img class="p_bg" src="./p1_bg.png" />
+            <img class="p" src="./p1.png" />
+            <img class="p_cta" src="./p1_cta.png" />
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./config_pfx.js"></script>
+    <script type="text/javascript" src="./basicTracking.js"></script>
+    <script>
+
+        const container = document.getElementById("slideContainer");
+
+        function handleStartAnimate() {
+            if (container.classList.contains("activeMob")) {
+                container.classList.remove("activeMob");
+            } else {
+                container.classList.add("activeMob");
+            }
+        }
+
+        const autoplay = setInterval(function () {
+            handleStartAnimate();
+        }, 3200);
+
+        setTimeout(() => {
+            clearInterval(autoplay)
+        }, 28000);
+
+    </script>
+</body>
+
+</html>

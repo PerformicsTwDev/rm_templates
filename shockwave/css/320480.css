@@ -1,0 +1,132 @@
+:root {
+  --icon-width: 100px;
+  --icon-height: 101px;
+  --animation-duration: 1s;
+  --animation-repeat: 30;
+  --shadow-shape: 100%; /** border radius : circle */
+  --shadow-color: 0, 0, 0; /* use rgb*/
+  --shadow-opacity: 0.15;
+}
+
+#mainContainer {
+  position: relative;
+  width: 320px;
+  height: 480px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+#featureBox {
+  position: absolute;
+  width: 320px;
+  height: 180px;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+#exitBox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  z-index: 50;
+  background-color: transparent;
+}
+
+#exitBox img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+}
+
+#exitBox #banner {
+  top: 180px;
+}
+
+/****** Animation Setting *******/
+
+#ctaAnimate {
+  position: absolute;
+  width: var(--icon-width);
+  height: var(--icon-height);
+  bottom: 23px;
+  right: 35px;
+}
+
+#ctaAnimate:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: var(--shadow-shape);
+  -webkit-animation: shockwave var(--animation-duration) 0.5s ease-out
+    var(--animation-repeat);
+  animation: shockwave var(--animation-duration) 0.5s ease-out
+    var(--animation-repeat);
+}
+
+#ctaAnimate:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: var(--shadow-shape);
+  -webkit-animation: shockwave var(--animation-duration) 0.65s ease-out
+    var(--animation-repeat);
+  animation: shockwave var(--animation-duration) 0.65s ease-out
+    var(--animation-repeat);
+}
+
+.ani-shockwaveJump {
+  animation: shockwaveJump var(--animation-duration) 0.5s ease-out
+    var(--animation-repeat);
+}
+.ani-shcokwave {
+  animation: shockwave var(--animation-duration) 0.5s ease-out
+    var(--animation-repeat);
+}
+
+@keyframes shockwaveJump {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.08);
+  }
+  50% {
+    transform: scale(0.98);
+  }
+  55% {
+    transform: scale(1.02);
+  }
+  60% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shockwave {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 2px rgba(var(--shadow-color), var(--shadow-opacity)),
+      inset 0 0 1px rgba(var(--shadow-color), var(--shadow-opacity));
+  }
+  95% {
+    box-shadow: 0 0 50px rgba(var(--shadow-color), 0),
+      inset 0 0 30px rgba(var(--shadow-color), 0);
+  }
+  100% {
+    transform: scale(2.25);
+  }
+}

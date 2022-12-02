@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/320180.css">
+	<script type="text/javascript" src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
+     <script type="text/javascript" src="js/openvv.js"></script>  
+</head>
+<body>
+	<div id="mainContainer">
+		<div id="exitBox"><img src="" style=""></div>
+		<div id="featureBox">
+			<div id="videoPoster" style="">
+				<img src="img/videoPoster.jpeg">
+				<div id="playBox">
+					<div id="play_btn_s">
+						<img src="https://s0.2mdn.net/creatives/assets/2910296/play_btn.png">
+					</div>
+				</div>
+			</div>
+			<div id="box" style="" >
+				<div id="videoBox"></div>
+			</div>
+			<div id="banner">
+				<img src="img/c.png">
+			</div>
+		</div>
+<!-- 		<iframe id="banner" width="320px" height="268px" style="margin:0 auto;" src="down.html"></iframe> -->
+	</div>
+	<IMG SRC="https://ad.doubleclick.net/ddm/trackimp/N1023889.279382DBMPERFORMICSTW-1/B25251252.293031037;dc_trk_aid=486024116;dc_trk_cid=144275124;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755}?" BORDER="0" HEIGHT="1" WIDTH="1" ALT="Advertisement">
+	<div id="statusContainer" v-bind:data-viewable="criteriaMet" style="display: none;">
+	    <ul>
+			
+	      <li>Viewable Above Threshold ({{ threshold * 100 }}%):  {{ viewable }}</span></li>
+	      <li>Viewability Criteria Met: {{ criteriaMet }}</li>
+	      <hr/>
+	      <li>Viewable Technique: {{ technique }}</li>
+	      <li>Viewport: {{ viewportWidth + ' x ' + viewportHeight }}</li>
+	      <li>Element: {{ elementWidth + ' x ' + elementHeight }}</li>
+	      <li>Focus: {{ focus }}</li>
+	      <li id="viewR">Percent Viewable: {{ (percentViewable * 100).toFixed(2) }}%</li>
+	      <li>Unmeasureable: {{ unmeasureable }}</li>
+	      <li>iFrameContext: {{ iframeContext }}</li>
+		
+		</ul>
+	</div>
+	<script type="text/javascript" src="js/basicTracking.js"></script>
+	<script type="text/javascript" src="js/basicVideo.js"></script>
+	<script type="text/javascript" src="js/demo.js"></script>
+	<script type="text/javascript" src="js/upNDown.js"></script>
+<!-- 	<script>
+		var myVideo = document.getElementById("video_1"); 
+		function playVideo() { 
+			myVideo.play(); 
+		}
+
+	  	function pauseVideo() { 
+			myVideo.pause(); 
+		}
+
+		function startVideo(){
+			var openStore = setInterval(function(){
+				var tempStr = document.getElementById('viewR').innerHTML;	
+				var percVal = String(tempStr).split(": ")[1].split('.')[0];
+				// console.log("percVal == "+percVal);
+				if(percVal>=80){
+					// ani();
+					console.log("70up");
+					video50Listener();
+					setTimeout(videoPlay,1000);
+					clearInterval(openStore);
+				};
+			},500)
+		}
+
+		function videoPlay(){
+		    is_click = true;
+		    videoM.dom.expandedExit.style.display = "block";
+		    videoM.dom.vidContainer.style.visibility = 'visible';
+
+		    if (videoM.dom.vid.readyState >= 2) {
+            videoM.dom.playBtn.style.display = "none";
+            startMuted(null);
+            } else  {videoM.dom.vid.hasCanPlay = true;
+                videoM.dom.playBtn.style.display = "none";
+            	videoM.dom.vid.addEventListener('canplay', startMuted, false);
+    		}
+		}
+
+		function video50Listener(){
+			var video50 = setInterval(function(){
+				var tempStr = document.getElementById('viewR').innerHTML;	
+				var percVal = String(tempStr).split(": ")[1].split('.')[0]
+				console.log("percVal == "+percVal);
+				if(percVal>=50){
+					playVideo();
+				}else if(percVal < 50){
+					pauseVideo();
+				}
+			},500)
+			myVideo.addEventListener('ended',function(){clearInterval(video50);}, false);
+		}
+		
+		
+		window.onload = startVideo;
+	  
+	  
+	</script> -->
+</body>
+</html>
