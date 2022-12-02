@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="stylesheet" href="css/320480.css" />
+  <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+</head>
+
+<body>
+  <div id="mainContainer">
+    <div id="exitBox">
+      <img id="vidPoster" src="img/poster.png">
+    </div>
+    <div id="featureBox">
+
+      <div id="box">
+        <div id="videoBox"></div>
+      </div>
+
+      <div id="in-box" class="in-box">
+        <img src="" alt="" id="leftImage" class="img1 imgct1" />
+        <img src="" alt="" id="rightImage" class="img2 imgct2" style="clip: rect(0px, 320px, 300px, 160px);" />
+        <div id="handler" style="left: 133px;">
+          <span class="left-arrow">
+            <svg width="8px" height="8px">
+              <path d="M8 0 L8 8 L1 4 Z" fill="white" class="animated flashSlow infinite" />
+            </svg>
+          </span>
+          <span class="right-arrow">
+            <svg width="8px" height="8px">
+              <path d="M0 0 L0 8 L7 4 Z" fill="white" class="animated flashSlow infinite" />
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div class="resultImg" id="resultImg">
+        <img class="imgct3" alt="" style="opacity: 0;" />
+      </div>
+
+      <div class="resultImg" id="resultImg2">
+        <img class="imgct4" alt="" style="opacity: 0;" />
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="config_pfx.js"></script>
+  <script type="text/javascript" src="js/basicTracking.js"></script>
+  <script type="text/javascript" src="js/basicVideo.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>

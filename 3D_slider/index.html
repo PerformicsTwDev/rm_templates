@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/320480.css" />
+  <title>320480PS</title>
+  <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+
+</head>
+
+<body>
+  <div id="mainContainer">
+    <div id="exitBox">
+      <img src="img/320480_bg.jpg" />
+    </div>
+
+    <div id="featureBox">
+
+      <div class="swiper-container" id="con">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" data-slide="cta1">
+            <img class="p_bg p1" src="img/p1.png" />
+          </div>
+
+          <div class="swiper-slide" data-slide="cta2">
+            <img class="p_bg p2" src="img/p2.png" />
+          </div>
+
+          <div class="swiper-slide" data-slide="cta3">
+            <img class="p_bg p3" src="img/p3.png" />
+          </div>
+
+          <div class="swiper-slide" data-slide="cta4">
+            <img class="p_bg p4" src="img/p4.png" />
+          </div>
+
+          <div class="swiper-slide" data-slide="cta5">
+            <img class="p_bg p5" src="img/p5.png" />
+          </div>
+        </div>
+      </div>
+
+      <div id="box">
+        <div id="videoBox"></div>
+      </div>
+
+    </div>
+
+    <div class="swiper-button-prev slider-btn">
+      <img class="p_bg" src="img/left.png" />
+    </div>
+
+    <div class="swiper-button-next slider-btn">
+      <img class="p_bg" src="img/right.png" />
+    </div>
+  </div>
+
+  <script src="config-pfx.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/3DSliderTracking.js"></script>
+  <script src="js/basicVideo.js"></script>
+
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      autoplay: {
+        delay: 1400,
+      },
+      loop: true,
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 60,
+        stretch: 100,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+</body>
+
+</html>

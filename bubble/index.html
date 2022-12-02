@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/320480.css" />
+    <link rel="stylesheet" href="css/pfx-bubbles.css" />
+    <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+    <title>cc bubbles</title>
+</head>
+
+<body>
+
+    <div id="mainContainer">
+        <div id="effect"></div>
+
+        <img id="imgKV" class="img-product bounce-top" src="img/kv.png">
+        <img id="imgBg" class="img-product" src="img/bg.png">
+        <img id="ctaBtn" class="img-product" src="img/cta-btn.png">
+    </div>
+
+    <script src="config_pfx.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="js/basicTracking.js"></script>
+    <script src="js/effect-bubble.js"></script>
+
+    <script>
+        var t2 = gsap.timeline({ yoyo: true, repeat: -1 })
+        t2.to('#imgKV', {
+            y: 20,
+            transformOrigin: "center",
+            duration: 1,
+            ease: Power2.easeOut,
+        })
+        setTimeout(() => {
+            t2.pause();
+        }, 20000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width" />
+  <link rel="stylesheet" href="css/floatcarousel.css" />
+  <link rel="stylesheet" href="css/320480.css" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>320480PS</title>
+  <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+</head>
+
+<body>
+  <div id="mainContainer">
+    <div id="exitBox"></div>
+    <div id="featureBox">
+      <div class="swiper-container" id="con">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide p1" data-slide="cta1">
+            <img class="p_bg" src="img/p1_bg.png" />
+            <img class="p" data-swiper-parallax="-3000" src="img/p1.png" />
+            <img class="p_cta" data-swiper-parallax="-3000" data-swiper-parallax-duration="500" src="img/p1_cta.png" />
+          </div>
+
+          <div class="swiper-slide p2" data-slide="cta2">
+            <img class="p_bg" src="img/p2_bg.png" />
+            <img class="p" data-swiper-parallax="-3000" src="img/p2.png" />
+            <img class="p_cta" data-swiper-parallax="-3000" data-swiper-parallax-duration="500" src="img/p2_cta.png" />
+          </div>
+
+          <div class="swiper-slide p3" data-slide="cta3">
+            <img class="p_bg" src="img/p3_bg.png" />
+            <img class="p" data-swiper-parallax="-3000" src="img/p3.png" />
+            <img class="p_cta" data-swiper-parallax="-3000" data-swiper-parallax-duration="500" src="img/p3_cta.png" />
+          </div>
+
+          <div class="swiper-slide p4" data-slide="cta4">
+            <img class="p_bg" src="img/p2_bg.png" />
+            <img class="p" data-swiper-parallax="-3000" src="img/p2.png" />
+            <img class="p_cta" data-swiper-parallax="-3000" data-swiper-parallax-duration="500" src="img/p2_cta.png" />
+          </div>
+
+          <div class="swiper-slide p5" data-slide="cta5">
+            <img class="p_bg" src="img/p3_bg.png" />
+            <img class="p" data-swiper-parallax="-3000" src="img/p3.png" />
+            <img class="p_cta" data-swiper-parallax="-3000" data-swiper-parallax-duration="500" src="img/p3_cta.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-prev slider-btn"></div>
+    <div class="swiper-button-next slider-btn"></div>
+  </div>
+
+
+  <script src="js/swiper-bundle.js"></script>
+  <script src="config_pfx.js"></script>
+  <script src="js/floatCarouselTracking.js"></script>
+
+  <script>
+
+    var mySwiper = new Swiper(".swiper-container", {
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: true,
+      },
+      parallax: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    document.querySelector(".swiper-button-prev").addEventListener("click", function () {
+      Enabler.counter("previous_slide_clicked", true);
+    });
+    document.querySelector(".swiper-button-next").addEventListener("click", function () {
+      Enabler.counter("next_slide_clicked", true);
+    });
+
+    // stop animation after 20 sec
+    setTimeout(function () {
+      mySwiper.autoplay.stop();
+    }, 20000);
+  </script>
+</body>
+
+</html>

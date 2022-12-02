@@ -1,0 +1,6 @@
+.cc-bubbles {
+  background: url(../img/bubble.png) no-repeat;
+  background-size: 100% 100%;
+
+  position: absolute;
+}
